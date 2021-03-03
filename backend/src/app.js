@@ -36,6 +36,13 @@ app.use(require('./db.js'));
 //rutas
 /*------------------PRODUCTO----------------*/
 app.use('/api/', require('./routers/products/product.router'));
+app.use('/api/', require('./routers/products/category.router'));
+app.use('/api/', require('./routers/users/user.router'));
+app.use('/api/', require('./routers/users/localization.router'));
+app.use('/api/', require('./routers/users/contact.router'));
+app.use('/api/', require('./routers/checkout/payment_method'));
+app.use('/api/', require('./routers/checkout/state_checkout'));
+app.use('/api/', require('./routers/checkout/checkout'));
 
 //servidor
 app.listen(app.get('port'), () => {
